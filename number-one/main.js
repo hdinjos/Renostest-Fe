@@ -1,9 +1,13 @@
 const modal = document.querySelector(".modal");
 const close = document.querySelector(".close");
 
-window.onclick = function (event) {
+function hideModal() {
+  modal.style.display = "none";
+}
+
+document.onclick = function (event) {
   if (event.target === modal) {
-    modal.style.display = "none";
+    hideModal();
   }
 };
 
@@ -12,5 +16,11 @@ function showModal() {
 }
 
 close.onclick = function () {
-  modal.style.display = "none";
+  hideModal();
+};
+
+document.onkeydown = function (e) {
+  if (e.keyCode === 27) {
+    hideModal();
+  }
 };

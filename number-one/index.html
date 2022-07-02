@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,25 +8,41 @@
   <title>Modal 1</title>
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-  <div class="container">
+  <div class="content">
     <h2 class="title">Soal No 1</h2>
-    <button onclick="showModal()">Show Modal</button>
-    <div class="modal">
-      <div class="modal-container">
-        <div>
+    <button class="btn-show" onclick="showModal()">Show Modal</button>
+  </div>
+  <div class="modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title">
           Header modal
-          <span class="close">&times;</span>
         </div>
-        <div>
-          content modal
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="modal-title">
+          Body modal
         </div>
-        <div>
-          footer modal
+        a. modal Vertically centered
+        b. terdapat 3 section didalam modal yaitu modal-header, modal-body, dan modal-footer
+        c. Scrollable body modal bila content melebihi 300px
+        d. modal dapat tertutup bila terdapat klik event di luar modal
+        e. modal dapat tertutup mengunnakan tombol ESC
+        f. overflow pada body disabled bila modal shown
+        g. terdapat close button didalam modal header
+        h. tidak di perkenankan menggunakan 3rd party library
+      </div>
+      <div class="modal-footer">
+        <div class="modal-title">
+          Footer modal
         </div>
       </div>
     </div>
-</div>
+  </div>
 </body>
 <script src="./main.js"></script>
+
 </html>
