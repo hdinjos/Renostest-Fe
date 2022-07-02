@@ -62,6 +62,17 @@
   overflow-y: hidden;
 }
 
+/* for webkit */
+.modal-body::-webkit-scrollbar{
+  height: 2px;
+  width: 2px;
+  background: #fff;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: #b2b2b2;
+}
+
 .modal-body:hover {
   overflow-y: auto;
 }
