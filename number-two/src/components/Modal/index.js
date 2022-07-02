@@ -12,6 +12,12 @@ function Modal({ children, visible, onClose }) {
     return () => window.removeEventListener("keydown", close);
   }, [onClose]);
 
+  useEffect(() => {
+    if (typeof children !== "object") {
+      throw Error("modalContent can only be filled with object type");
+    }
+  }, [children]);
+
   return (
     visible && (
       <div className={style["modal"]} onClick={onClose}>
